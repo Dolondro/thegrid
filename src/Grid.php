@@ -27,8 +27,13 @@ class Grid
     protected $cols;
     protected $rows;
     protected $grid = [];
+    // If we have a cell width less than 3, it looks pretty ugly.
     protected $cellWidth = 3;
 
+    /**
+     * Grid constructor.
+     * @param $array
+     */
     public function __construct($array)
     {
         // Maybe the validate should be here, maybe the GridFactory is misleading
@@ -39,7 +44,11 @@ class Grid
         $this->grid = $this->normalise($array);
     }
 
-    protected function normalise($array)
+    /**
+     * @param array $array
+     * @return array
+     */
+    protected function normalise(array $array)
     {
         $grid = [];
         foreach ($array as $row) {
@@ -64,6 +73,9 @@ class Grid
         return $grid;
     }
 
+    /**
+     * @return array
+     */
     public function render()
     {
         // We render as rows so the person using this library has the ability to put several grids next to each other
@@ -77,10 +89,13 @@ class Grid
         return $renderedRows;
     }
 
+    /**
+     * @param string $position
+     * @return string
+     */
     public function renderRow($position)
     {
         $string = "";
-
         for ($column=0; $column < $this->cols; $column++) {
             for ($x=0; $x < $this->cellWidth + 1; $x++) {
                 if ($column == 0 && $x == 0) {
@@ -155,8 +170,6 @@ class Grid
     {
         $string = "";
 
-        //var_dump($this->cellWidth);
-        //die();
         foreach ($row as $column => $cell) {
             for ($x=0; $x < $this->cellWidth; $x++) {
                 if ($column == 0 && $x == 0) {
@@ -169,8 +182,6 @@ class Grid
                     $string .= $cell->getColor().str_pad($cell->getValue(), $this->cellWidth, " ", STR_PAD_BOTH).Cell::COLOR_NONE; // Also the colour and shit
                 }
             }
-            //var_dump([$cell, $column, $x, $cell->getColor().str_pad($cell->getValue(), $this->cellWidth, " ", STR_PAD_BOTH).Cell::COLOR_NONE]);
-
         }
         return $string;
     }
