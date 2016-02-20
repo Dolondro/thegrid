@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dolondro\Grid;
+namespace Dolondro\TheGrid;
 
 
-use Dolondro\Grid\Exception\ValidationException;
+use Dolondro\TheGrid\Exception\ValidationException;
 
 class GridFactory
 {

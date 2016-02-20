@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dolondro\Grid;
+namespace Dolondro\TheGrid;
 
 
 class Cell
@@ -15,16 +15,6 @@ class Cell
     const COLOR_CYAN =      "\033[36m";
     const COLOR_WHITE =     "\033[37m";
     const COLOR_NONE =      "\033[0m";
-
-/*30	Black
-31	Red
-32	Green
-33	Yellow
-34	Blue
-35	Magenta
-36	Cyan
-37	White*/
-
 
     protected $color;
     protected $value;

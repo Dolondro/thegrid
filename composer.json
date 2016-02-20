@@ -1,5 +1,5 @@
 {
-    "name": "dolondro/grid",
+    "name": "dolondro/thegrid",
     "authors": [
         {
             "name": "Doug",
@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Dolondro\\Grid\\": "src/"
+            "Dolondro\\TheGrid\\": "src/"
         }
     }
 }

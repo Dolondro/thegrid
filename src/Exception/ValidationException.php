@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dolondro\Grid\Exception;
+namespace Dolondro\TheGrid\Exception;
 
 
 class ValidationException extends \Exception

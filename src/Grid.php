@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dolondro\Grid;
+namespace Dolondro\TheGrid;
 
 
 class Grid
