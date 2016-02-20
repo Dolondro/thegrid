@@ -1,0 +1,14 @@
+{
+    "name": "dolondro/grid",
+    "authors": [
+        {
+            "name": "Doug",
+            "email": "dougnelson@silktide.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dolondro\\Grid\\": "src/"
+        }
+    }
+}
